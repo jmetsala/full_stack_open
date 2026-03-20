@@ -5,10 +5,9 @@ sequenceDiagram
 
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
     activate server
+    Note left of server: The server stores the new note and directs the user back to the notes page
     server-->>browser: 302 Found: Location = /exampleapp/notes
     deactivate server
-
-    Note left of server: The server stores the new note and directs the user back to the notes page
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate server
